@@ -1,0 +1,81 @@
+html, body {
+  font-family: 'Roboto', sans-serif;
+  background: #F8F8F8;
+  height: 100vh;
+  font-size: 16px;
+  color: #495057;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-top: 0;
+  background: #f8f9fa;
+}
+
+h1, h2 {
+  font-weight: 300;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.625rem;
+}
+
+.header .image {
+  padding-top: 128px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.header .image .profile {
+  height: 150px;
+  width: 150px;
+  border: 1px solid #f8f9fa;
+  border-radius: 50%;
+  background: url(/assets/img/profile.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.header .name {
+  padding-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.header .tag {
+  padding-bottom: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.header h1, h3 {
+  margin-top: 0;
+}
+
+.header .links {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.header .links a {
+  color: #495057;
+}
+
+.header .links a:hover {
+  color: #212529;
+}
