@@ -3,9 +3,6 @@ var port = process.env.PORT || 3000;
 
 var app = express();
 
-app.get('/portfolio', function(req,res){
-  res.sendFile(__dirname + '/public/portfolio.html');
-});
-
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/src'));
 app.listen(port);
+console.log('Server started!');
