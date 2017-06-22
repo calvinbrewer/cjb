@@ -74,3 +74,12 @@ p {
 .header .links a:hover {
   color: #212529;
 }
+
+.pics {
+  width: 100%;
+  text-align: center;
+}
+
+.pics img {
+  width: 150px;
+}
