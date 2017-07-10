@@ -55,12 +55,12 @@ app.get('/4.html', function (req, res, next) {
 });
 
 app.get('/5.html', function (req, res, next) {
-    var html = "<h1>Hello everyone!</h1>\n<p>Page count: <esi:include src='/pagecount'/></p>\n";
+    var html = "<h1>Hello everyone!</h1>\n<p>Page count: <esi:include src='/pagecount-esi'/></p>\n";
     res.send(html);
 });
 
 app.get('/6.html', function (req, res, next) {
-    var html = "<h1>Hello everyone!</h1>\n<p>Page count: <esi:include src='/pagecount'/></p>\n";
+    var html = "<h1>Hello everyone!</h1>\n<p>Page count: <esi:include src='/pagecount-esi'/></p>\n";
     res.send(html);
 });
 
