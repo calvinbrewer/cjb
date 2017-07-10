@@ -22,6 +22,11 @@ app.get('/1.html', function (req, res, next) {
 });
 
 app.get('/2.html', function (req, res, next) {
+    res.send("<h1>Hello everyone!</h1>\n<p>Page count: " + pagecount + "</p>");
+    pagecount += 1;
+});
+
+app.get('/3.html', function (req, res, next) {
     var html = "<h1>Hello everyone!</h1>\n<p>Page count: <span id='p'></span></p>\n" +
                "<script src='/assets/js/jquery-3.2.1.min.js'></script>\n" +
                "<script>\n" +
@@ -35,7 +40,26 @@ app.get('/2.html', function (req, res, next) {
     res.send(html);
 });
 
-app.get('/3.html', function (req, res, next) {
+app.get('/4.html', function (req, res, next) {
+    var html = "<h1>Hello everyone!</h1>\n<p>Page count: <span id='p'></span></p>\n" +
+               "<script src='/assets/js/jquery-3.2.1.min.js'></script>\n" +
+               "<script>\n" +
+               "$(document).ready(function() {\n" +
+               "  $.getJSON('/pagecount', function(data) {\n" +
+               "    console.log(data);\n" +
+               "    $('#p').html(data.pagecount);\n" +
+               "  });\n"+
+               "});\n" +
+               "</script>";
+    res.send(html);
+});
+
+app.get('/5.html', function (req, res, next) {
+    var html = "<h1>Hello everyone!</h1>\n<p>Page count: <esi:include src='/pagecount'/></p>\n";
+    res.send(html);
+});
+
+app.get('/6.html', function (req, res, next) {
     var html = "<h1>Hello everyone!</h1>\n<p>Page count: <esi:include src='/pagecount'/></p>\n";
     res.send(html);
 });
