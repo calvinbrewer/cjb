@@ -9,7 +9,7 @@ app.get('/pagecount-esi-1', function (req, res, next) {
     pagecount += 1;
 });
 
-app.use(function(req,res,next){setTimeout(next,Math.floor(Math.random() * (2000 - 1000 + 1) + 1000))});
+// app.use(function(req,res,next){setTimeout(next,Math.floor(Math.random() * (2000 - 1000 + 1) + 1000))});
 
 app.get('/pagecount', function (req, res, next) {
     res.json({ pagecount: pagecount });
