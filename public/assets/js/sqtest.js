@@ -25,9 +25,8 @@ function configAndSendBeacon(e) {
     // e.detail.BOOMR is a reference to the BOOMR global object
     e.detail.BOOMR.subscribe('before_beacon', function (x) {
         var config = window['SectionioAnalyticsConfig'];
-        e.detail.BOOMR.addVar('sctio_env', config && config.sqrum);
 
-        var pageName = 'Uncategorised';
+        e.detail.BOOMR.addVar('sctio_env', config && config.sqrum);
         e.detail.BOOMR.addVar('sq_pt', window.sq_pagetype_override || pageName);
     });
 
