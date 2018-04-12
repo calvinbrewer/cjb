@@ -3107,18 +3107,17 @@ see: http://www.w3.org/TR/navigation-timing/
         done: !1,
         init: function(e) {
             BOOMR.debug("init SQCFG", "sqcfg");
-            w.beacon_url ? this : (
-              BOOMR.subscribe("page_ready", t.loadConfig, null, t);
-              this.done = !0;
-              "undefined" != typeof sq_farmname && (
-                BOOMR.addVar("sqfarmname", sq_farmname);
-                BOOMR.debug("Set farmname variable to " + sq_farmname, "sqcfg");
-              ), this
-            );
+
+            if (w.beacon_url) return this;
+            else {
+                BOOMR.subscribe("page_ready", t.loadConfig, null, t);
+                this.done = !0;
+                return this;
+            }
         },
         is_complete: function() {
-            return this.done
+            return this.done;
         }
-    }
+    };
 }(window);
 // End sqcfg plugin
