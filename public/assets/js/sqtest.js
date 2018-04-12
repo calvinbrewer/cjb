@@ -3119,5 +3119,5 @@ see: http://www.w3.org/TR/navigation-timing/
             return this.done;
         }
     };
-}(window);
+})(window);
 // End sqcfg plugin
