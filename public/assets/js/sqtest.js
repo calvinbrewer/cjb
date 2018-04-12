@@ -21,6 +21,8 @@
  */
 
 // Custom Section.io code
+var sq_rumversion = 3;
+
 function configAndSendBeacon(e) {
     // e.detail.BOOMR is a reference to the BOOMR global object
     e.detail.BOOMR.subscribe('before_beacon', function (x) {
@@ -3098,7 +3100,7 @@ see: http://www.w3.org/TR/navigation-timing/
                 i = t.getElementsByTagName("script")[0],
                 n = t.createElement("script"),
                 o = t.location.hostname;
-            n.src = "/.well-known/section-io/rum/" + encodeURIComponent(o) + ".js";
+            n.src = "/.well-known/section-io/rum/" + encodeURIComponent(o) + ".js?version=" + sq_rumversion;
             i.parentNode.insertBefore(n, i);
             i = n = null;
         }
@@ -3108,8 +3110,7 @@ see: http://www.w3.org/TR/navigation-timing/
         done: false,
         init: function(e) {
             BOOMR.debug("init SQCFG", "sqcfg");
-
-            BOOMR.subscribe("page_ready", t.loadConfig, null, t);
+            t.loadConfig();
             this.done = true;
             return this;
         },
@@ -3119,3 +3120,6 @@ see: http://www.w3.org/TR/navigation-timing/
     };
 })(window);
 // End sqcfg plugin
+
+
+BOOMR.plugins.SQCFG.done()
