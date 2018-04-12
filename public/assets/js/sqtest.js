@@ -3114,7 +3114,7 @@ see: http://www.w3.org/TR/navigation-timing/
             return this;
         },
         is_complete: function() {
-            return this.done;
+            return w.sq_pagetype_override && this.done;
         }
     };
 })(window);
