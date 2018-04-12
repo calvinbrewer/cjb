@@ -3108,13 +3108,9 @@ see: http://www.w3.org/TR/navigation-timing/
         done: !1,
         init: function(e) {
             BOOMR.debug("init SQCFG", "sqcfg");
-
-            if (w.beacon_url) return this;
-            else {
-                BOOMR.subscribe("page_ready", t.loadConfig, null, t);
-                this.done = !0;
-                return this;
-            }
+            t.loadConfig();
+            this.done = !0;
+            return this;
         },
         is_complete: function() {
             return this.done;
