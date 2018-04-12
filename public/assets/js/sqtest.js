@@ -26,6 +26,8 @@ function configAndSendBeacon(e) {
     e.detail.BOOMR.subscribe('before_beacon', function (x) {
         var config = window['SectionioAnalyticsConfig'];
 
+        console.log("Hello from before_beacon: ", window.sq_pagetype_override);
+
         e.detail.BOOMR.addVar('sctio_env', config && config.sqrum);
         e.detail.BOOMR.addVar('sq_pt', window.sq_pagetype_override || pageName);
     });
