@@ -3105,11 +3105,12 @@ see: http://www.w3.org/TR/navigation-timing/
     };
 
     BOOMR.plugins.SQCFG = {
-        done: !1,
+        done: false,
         init: function(e) {
             BOOMR.debug("init SQCFG", "sqcfg");
-            t.loadConfig();
-            this.done = !0;
+
+            BOOMR.subscribe("page_ready", t.loadConfig, null, t);
+            this.done = true;
             return this;
         },
         is_complete: function() {
