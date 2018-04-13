@@ -1,14 +1,4 @@
 /**
- * Sqrum v3
- *
- * Release notes:
- * Add SQCFG plugins
- *
- * This lets users define classification pages from a JS file defined
- * in their applications repository rum directory.
- */
-
-/**
  * @license
  *
  * @copyright (c) 2011, Yahoo! Inc.  All rights reserved.
@@ -28,7 +18,7 @@ function configAndSendBeacon(e) {
     e.detail.BOOMR.subscribe('before_beacon', function (x) {
         var config = window['SectionioAnalyticsConfig'];
 
-        console.log("Hello from before_beacon: ", window.sq_pagetype_override);
+        var pageName = 'Uncategorized';
 
         e.detail.BOOMR.addVar('sctio_env', config && config.sqrum);
         e.detail.BOOMR.addVar('sq_pt', window.sq_pagetype_override || pageName);
@@ -3100,7 +3090,7 @@ see: http://www.w3.org/TR/navigation-timing/
                 i = t.getElementsByTagName("script")[0],
                 n = t.createElement("script"),
                 o = t.location.hostname;
-            n.src = "/.well-known/section-io/rum/" + encodeURIComponent(o) + ".js?version=" + sq_rumversion;
+            n.src = "//www.umg-downloads.com/.well-known/section-io/rum/www.umg-downloads.com.js?version=" + sq_rumversion;
             i.parentNode.insertBefore(n, i);
             i = n = null;
         }
@@ -3120,6 +3110,3 @@ see: http://www.w3.org/TR/navigation-timing/
     };
 })(window);
 // End sqcfg plugin
-
-
-BOOMR.plugins.SQCFG.done()
