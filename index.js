@@ -74,6 +74,12 @@ app.get('/7.html', function (req, res, next) {
     res.send(html);
 });
 
+app.use(function(req, res, next) {
+  console.log("Request headers:", req.headers);
+  console.log("Request URL:", req.url);
+  next();
+});
+
 app.use(express.static(__dirname + '/public'));
 
 app.listen(port);
