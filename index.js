@@ -22,7 +22,15 @@ app.get('/pagecount-esi', function (req, res, next) {
 });
 
 app.get('/1.html', function (req, res, next) {
-    res.send("<h1>section.io Varnish done right</h1>\n<p>Page count: " + pagecount + "</p>");
+    res.send("<!DOCTYPE html>" + 
+"<html>"+ 
+  "<head>" +
+    '<meta charset="UTF-8">' +
+  "</head>" + 
+  "<body>" + 
+  "<h1>section.io Varnish done right</h1>\n<p>Page count: " + pagecount + "</p>" + 
+  "</body>" + 
+"</html>");      
     pagecount += 1;
 });
 
