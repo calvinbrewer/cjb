@@ -9,6 +9,7 @@ app.get('/pagecount-esi-1', function (req, res, next) {
     pagecount += 1;
 });
 
+// Uncomment this next line to delay all responses by ~2 seconds 
 // app.use(function(req,res,next){setTimeout(next,Math.floor(Math.random() * (2000 - 1000 + 1) + 1000))});
 
 app.get('/pagecount', function (req, res, next) {
@@ -22,15 +23,17 @@ app.get('/pagecount-esi', function (req, res, next) {
 });
 
 app.get('/1.html', function (req, res, next) {
-    res.send("<!DOCTYPE html>" + 
-"<html>"+ 
-  "<head>" +
-    '<meta charset="UTF-8">' +
-  "</head>" + 
-  "<body>" + 
-  "<h1>section.io Varnish done right</h1>\n<p>Page count: " + pagecount + "</p>" + 
-  "</body>" + 
-"</html>");      
+    res.send("<!DOCTYPE html>" +
+      "<html>"+
+        "<head>" +
+          '<meta charset="UTF-8">' +
+        "</head>" +
+        "<body>" +
+        "<h1>section.io Varnish done right</h1>\n<p>Page count: " + pagecount + "</p>" +
+        "</body>" +
+      "</html>"
+    );
+
     pagecount += 1;
 });
 

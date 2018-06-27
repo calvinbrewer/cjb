@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CJ Maps Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon"
+      type="image/png"
+      href="/assets/img/favicon.png">
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body class="template-index">
+    <div class="header">
+      <div class="image">
+        <div id="map"></div>
+        <script>
+          var map;
+          function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: -34.397, lng: 150.644},
+              zoom: 8
+            });
+          }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTY931prActojAMso3C7RQeyuX4qeazIk&callback=initMap"
+        async defer></script>
+      </div>
+    </div>
+  </body>
+</html>
