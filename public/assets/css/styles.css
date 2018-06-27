@@ -30,6 +30,16 @@ p {
   padding-bottom: 6rem;
 }
 
+.maps {
+  height: 100%;
+  width: 100%;
+}
+
+.maps #map {
+  height: 100%;
+  width: 100%;
+}
+
 .header .image {
   display: flex;
   justify-content: center;
