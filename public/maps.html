@@ -17,13 +17,21 @@
       <script>
         var map;
         function initMap() {
+          var myLatLng = {lat: -25.363, lng: 131.044};
+
           map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: -34.397, lng: 150.644},
             zoom: 8
           });
+
+          var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Hello World!'
+          });
         }
       </script>
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTY931prActojAMso3C7RQeyuX4qeazIk&callback=initMap"
+      <script src="https://maps.cjb.io/maps/api/js?key=AIzaSyBTY931prActojAMso3C7RQeyuX4qeazIk&callback=initMap"
       async defer></script>
     </div>
   </body>
