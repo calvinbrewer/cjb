@@ -51,7 +51,7 @@ p {
   width: 150px;
   border: 1px solid #f8f9fa;
   border-radius: 50%;
-  background: url(/assets/img/profile.jpg) no-repeat center center;
+  background: url(/me/assets/img/profile.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

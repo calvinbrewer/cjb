@@ -1,10 +1,12 @@
+require('dotenv').config();
 require('newrelic');
 
-var express = require('express');
-var port = process.env.PORT || 3000;
+const express = require('express');
+const { Nuxt, Builder } = require('nuxt')
+const port = process.env.PORT || 3000;
 
-var app = express();
-var pagecount = 1;
+const app = express();
+const pagecount = 1;
 
 app.get('/pagecount-esi-1', function (req, res, next) {
     res.send("<span id='p'>" + pagecount + "</span>");
@@ -45,7 +47,7 @@ app.get('/2.html', function (req, res, next) {
 });
 
 app.get('/3.html', function (req, res, next) {
-    var html = "<h1>section.io Varnish done right</h1>\n<p>Page count: <span id='p'></span></p>\n" +
+    const html = "<h1>section.io Varnish done right</h1>\n<p>Page count: <span id='p'></span></p>\n" +
                "<script src='/assets/js/jquery-3.2.1.min.js'></script>\n" +
                "<script>\n" +
                "$(document).ready(function() {\n" +
@@ -59,7 +61,7 @@ app.get('/3.html', function (req, res, next) {
 });
 
 app.get('/4.html', function (req, res, next) {
-    var html = "<h1>section.io Varnish done right</h1>\n<p>Page count: <span id='p'></span></p>\n" +
+    const html = "<h1>section.io Varnish done right</h1>\n<p>Page count: <span id='p'></span></p>\n" +
                "<script src='/assets/js/jquery-3.2.1.min.js'></script>\n" +
                "<script>\n" +
                "$(document).ready(function() {\n" +
@@ -73,17 +75,17 @@ app.get('/4.html', function (req, res, next) {
 });
 
 app.get('/5.html', function (req, res, next) {
-    var html = "<h1>section.io Varnish done right</h1>\n<p>Page count: <esi:include src='/pagecount-esi'/></p>\n";
+    const html = "<h1>section.io Varnish done right</h1>\n<p>Page count: <esi:include src='/pagecount-esi'/></p>\n";
     res.send(html);
 });
 
 app.get('/6.html', function (req, res, next) {
-    var html = "<h1>section.io Varnish done right</h1>\n<p>Page count: <esi:include src='/pagecount-esi'/></p>\n";
+    const html = "<h1>section.io Varnish done right</h1>\n<p>Page count: <esi:include src='/pagecount-esi'/></p>\n";
     res.send(html);
 });
 
 app.get('/7.html', function (req, res, next) {
-    var html = "<h1>section.io Varnish done right</h1>\n<p>Page count: <esi:include src='/pagecount-esi-1'/></p>\n";
+    const html = "<h1>section.io Varnish done right</h1>\n<p>Page count: <esi:include src='/pagecount-esi-1'/></p>\n";
     res.send(html);
 });
 
@@ -93,7 +95,20 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use(express.static(__dirname + '/public'));
+app.use('/me', express.static(__dirname + '/public'));
+
+const isProd = process.env.NODE_ENV === 'production';
+const nuxt = new Nuxt({
+    dev: !isProd,
+    srcDir: 'nuxt/',
+});
+
+if (!isProd) {
+    const builder = new Builder(nuxt)
+    builder.build()
+}
+
+app.use(nuxt.render);
 
 app.listen(port);
 console.log('Server started!');
