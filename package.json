@@ -4,10 +4,11 @@
   "description": "The website of me",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "npm run vgenerate && node index.js",
     "vdev": "nuxt",
     "vbuild": "nuxt build",
-    "vstart": "nuxt start"
+    "vstart": "nuxt start",
+    "vgenerate": "nuxt generate"
   },
   "repository": {
     "type": "git",

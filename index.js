@@ -90,25 +90,13 @@ app.get('/7.html', function (req, res, next) {
 });
 
 app.use(function(req, res, next) {
-  console.log("Request headers:", req.headers);
-  console.log("Request URL:", req.url);
-  next();
+    console.log("Request headers:", req.headers);
+    console.log("Request URL:", req.url);
+    next();
 });
 
-app.use('/me', express.static(__dirname + '/public'));
-
-const isProd = process.env.NODE_ENV === 'production';
-const nuxt = new Nuxt({
-    dev: !isProd,
-    srcDir: 'nuxt/',
-});
-
-if (!isProd) {
-    const builder = new Builder(nuxt)
-    builder.build()
-}
-
-app.use(nuxt.render);
+app.use('/nuxt', express.static(__dirname + '/dist'));
+app.use('/', express.static(__dirname + '/public'));
 
 app.listen(port);
 console.log('Server started!');
