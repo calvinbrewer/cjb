@@ -2,10 +2,14 @@ require('dotenv').config();
 require('newrelic');
 
 const express = require('express');
-const { Nuxt, Builder } = require('nuxt')
+const { Nuxt, Builder } = require('nuxt');
+const bodyParser = require('body-parser');
+
 const port = process.env.PORT || 3000;
 
 const app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
+
 const pagecount = 1;
 
 app.get('/pagecount-esi-1', function (req, res, next) {
@@ -93,6 +97,13 @@ app.use(function(req, res, next) {
     console.log("Request headers:", req.headers);
     console.log("Request URL:", req.url);
     next();
+});
+
+app.post('/drift-test', function(req, res, next) {
+    console.log("Request headers:", req.headers);
+    console.log("Request Body:", req.body);
+    res.status = 204;
+    res.send();
 });
 
 app.use('/nuxt', express.static(__dirname + '/dist'));
