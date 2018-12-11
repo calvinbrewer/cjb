@@ -9,6 +9,7 @@ const port = process.env.PORT || 3000;
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 const pagecount = 1;
 
@@ -100,10 +101,8 @@ app.use(function(req, res, next) {
 });
 
 app.post('/drift-test', function(req, res, next) {
-    console.log("Request headers:", req.headers);
     console.log("Request Body:", req.body);
-    res.status = 204;
-    res.send();
+    res.send("Cool that worked.");
 });
 
 app.use('/nuxt', express.static(__dirname + '/dist'));
