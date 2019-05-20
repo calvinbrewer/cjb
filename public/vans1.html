@@ -1,79 +1,6 @@
 
 <!doctype html>
 <html lang="en">
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product: http://ogp.me/ns/product#">
-    <script>var require={"baseUrl":"https://www.vans.com.au/static/version1557985025/frontend/Ewave/vans/en_AU"};</script>
-    <meta charset="utf-8"/><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
-<meta name="description" content="Shop Boys Torrey Oversized Camo Jacket  from Vans Shoes Online. Free &amp; fast deliveries with Buy Now &amp; Pay Later available online, or visit us in-store. Shop Vans today."/>
-<meta name="robots" content="INDEX,FOLLOW"/>
-<meta name="viewport" content="width=device-width"/>
-<meta name="format-detection" content="telephone=no"/>
-<title>Shop Vans Apparel and Accessories Boys Torrey Oversized Camo Jacket | Vans Australia</title>
-<link rel="stylesheet" type="text/css" media="all" href="https://www.vans.com.au/static/version1557985025/_cache/merged/d04075d32df046c4e12174b45a6e55cb.min.css"/>
-<link rel="stylesheet" type="text/css" media="screen and (min-width: 768px)" href="https://www.vans.com.au/static/version1557985025/frontend/Ewave/vans/en_AU/css/A.styles-l.min.css.pagespeed.cf.2P4hEw0V8x.css"/>
-<link rel="stylesheet" type="text/css" media="print" href="https://www.vans.com.au/static/version1557985025/frontend/Ewave/vans/en_AU/css/A.print.min.css.pagespeed.cf.QSpjdf_F1E.css"/>
-<script type="text/javascript" src="https://www.vans.com.au/static/version1557985025/frontend/Ewave/vans/en_AU/requirejs/require.min.js"></script>
-<script type="text/javascript">var ctx=require.s.contexts._,origNameToUrl=ctx.nameToUrl;ctx.nameToUrl=function(){var url=origNameToUrl.apply(ctx,arguments);if(!url.match(/\/tiny_mce\//)&&!url.match(/\/Temando_Shipping\/static\/js\//)&&!url.match(/https:\/\/www.google.com\/recaptcha\/api.js/)){url=url.replace(/(\.min)?\.js$/,'.min.js');}return url;};</script>
-<script type="text/javascript" src="https://www.vans.com.au/static/version1557985025/frontend/Ewave/vans/en_AU/js/bundle/bundle0.min.js"></script>
-<script type="text/javascript" src="https://www.vans.com.au/static/version1557985025/frontend/Ewave/vans/en_AU/js/bundle/bundle1.min.js.pagespeed.jm.ZHYwe39FFM.js"></script>
-<script type="text/javascript" src="https://www.vans.com.au/static/version1557985025/frontend/Ewave/vans/en_AU/js/bundle/bundle2.min.js"></script>
-<script type="text/javascript" src="https://www.vans.com.au/static/version1557985025/frontend/Ewave/vans/en_AU/js/bundle/bundle3.min.js.pagespeed.jm.9muCf1GI9g.js"></script>
-<script src="https://www.vans.com.au/static/version1557985025/frontend/Ewave/vans/en_AU/mage,_requirejs,_static.min.js+mage,_requirejs,_mixins.min.js+requirejs-config.min.js+Ebizmarts_MailChimp,_js,_mailchimpjs.min.js+js,_polyfills.min.js+js,_components,_zendesk-chat.min.js+js,_components,_load-script.min.js.pagespeed.jc.iS1ap25Swg.js"></script><script>eval(mod_pagespeed_yddX5eJnkN);</script>
-<script>eval(mod_pagespeed_jcZvrDIjgI);</script>
-<script>eval(mod_pagespeed_N4zEhR6TS5);</script>
-<script>eval(mod_pagespeed_sTX1KNv75w);</script>
-<script>eval(mod_pagespeed_qi_6A391Mr);</script>
-<script>eval(mod_pagespeed_MEUHGaW$jE);</script>
-<script>eval(mod_pagespeed_BcN4K76EzC);</script>
-<link rel="canonical" href="https://www.vans.com.au/boys-torrey-oversized-camo-jacket.html"/>
-<link rel="icon" type="image/x-icon" href="https://www.vans.com.au/media/favicon/stores/5/favicon.png"/>
-<link rel="shortcut icon" type="image/x-icon" href="https://www.vans.com.au/media/favicon/stores/5/favicon.png"/>
-<!-- Start of vanscustomercare Zendesk Widget script -->
-<script>window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var e=this.createElement("script");n&&(this.domain=n),e.id="js-iframe-async",e.src="https://assets.zendesk.com/embeddable_framework/main.js",this.t=+new Date,this.zendeskHost="vanscustomercare.zendesk.com",this.zEQueue=a,this.body.appendChild(e)},o.write('<body onload="document._l();">'),o.close()}();</script>
- <script>window.zESettings={webWidget:{launcher:{label:{'*':'Help'}},helpCenter:{title:{'*':'Help'},chatButton:{'*':'LIVE CHAT'}}}};zE(function(){zE.setHelpCenterSuggestions({search:'returns'});$zopim(function(){$zopim.livechat.window.setTitle('Customer Care');$zopim.livechat.concierge.setAvatar('https://www.vans.com.au/media/favicon/stores/3/favicon.png');$zopim.livechat.concierge.setName('Vans Support');$zopim.livechat.concierge.setTitle('Ask us anything');});});</script>
-
-<!-- End of vanscustomercare Zendesk Widget script -->
-
-
-<!-- LE 19 MARCH - CUSTOM STYLING. PLEASE DO NOT REMOVE -->
-<style type="text/css">.delivery-info+h1{display:none}.message.success{background:#579bc9}.message.error{color:#eb0004;background:#f9d8d9}.cms-about-us .info-block{float:right;max-width:406px;margin-left:140px;padding:30px 25px}.cms-about-us .page-title{text-align:right}.categorypath-featured-ultra-range-h1#page-title-heading{display:none}.checkout-index-index .checkout-sidebar .braintree-paypal-placeholder{opacity:.01}​.page-layout-withoutpaddings .main .clear p:first-of-type{display:block}.cms-vansguards-2019 .page-main .table .tr .td .th{border-collapse:collapse;padding:0;spacing:0}</style>
-<meta name="google-site-verification" content="fhRt7yRM4jz-wrHJ-Bgycwyd-bRReCZPThcQli0-g6I"/>
-
-<link rel="alternate" href="https://www.vans.com/" hreflang="x-default"/>
-<link rel="alternate" href="https://www.vans.com.au/" hreflang="en-au"/>
-<link rel="alternate" hreflang="en-gb" href="https://www.vans.co.uk"/>
-<link rel="alternate" hreflang="de-at" href="https://www.vans.at"/>
-<link rel="alternate" hreflang="de-be" href="https://www.vans.be"/>
-<link rel="alternate" hreflang="fr-be" href="https://www.vans.be"/>
-<link rel="alternate" hreflang="nl-be" href="https://www.vans.be"/>
-<link rel="alternate" hreflang="fr-fr" href="https://www.vans.fr"/>
-<link rel="alternate" hreflang="de-de" href="https://www.vans.de"/>
-<link rel="alternate" hreflang="en-ie" href="https://www.vans.ie"/>
-<link rel="alternate" hreflang="it-it" href="https://www.vans.it"/>
-<link rel="alternate" hreflang="de-lu" href="https://www.vans.lu"/>
-<link rel="alternate" hreflang="fr-lu" href="https://www.vans.lu"/>
-<link rel="alternate" hreflang="nl-nl" href="https://www.vans.nl"/>
-<link rel="alternate" hreflang="es-es" href="https://www.vans.es"/>
-<link rel="alternate" hreflang="en-se" href="https://www.vans.se"/>
-<link rel="alternate" hreflang="fr-ch" href="https://www.vans.ch"/>
-<link rel="alternate" hreflang="de-ch" href="https://www.vans.ch"/>
-<link rel="alternate" hreflang="it-ch" href="https://www.vans.ch"/>
-<link rel="alternate" hreflang="en-gb" href="https://www.vans.co.uk"/>
-<link rel="alternate" hreflang="en-eu" href="https://www.vans.eu"/>
-<link rel="alternate" hreflang="en-us" href="https://www.vans.com/"/>    
-<!--FAST FONTS-->
-<script>!function(){"use strict";function a(a,b,c){a.addEventListener?a.addEventListener(b,c,!1):a.attachEvent&&a.attachEvent("on"+b,c)}function b(a){return window.localStorage&&localStorage.font_css_cache&&localStorage.font_css_cache_file===a}function c(){if(window.localStorage&&window.XMLHttpRequest)if(b(f))d(localStorage.font_css_cache);else{var a=new XMLHttpRequest,c=!1;a.open("GET",f,!0),a.onreadystatechange=function(){if(4===a.readyState){var b=a.responseText;try{localStorage.font_css_cache=b,localStorage.font_css_cache_file=f}catch(a){c=!0,console.log(a)}c?(b=b.replace(new RegExp("../fonts/","g"),e+"fonts/"),d(b)):(b=b.replace(new RegExp("../fonts/","g"),e+"fonts/"),d(b),localStorage.font_css_cache=b,localStorage.font_css_cache_file=f)}},a.send()}else{var g=document.createElement("link");g.href=f,g.rel="stylesheet",g.type="text/css",document.getElementsByTagName("head")[0].appendChild(g),document.cookie="font_css_cache"}}function d(a){var b=document.createElement("style");b.setAttribute("type","text/css"),document.getElementsByTagName("head")[0].appendChild(b),b.styleSheet?b.styleSheet.cssText=a:b.innerHTML=a}var e="https://www.vans.com.au/static/version1557985025/frontend/Ewave/vans/en_AU/",f=e+"css/fonts.min.css?v=1";window.localStorage&&localStorage.font_css_cache||document.cookie.indexOf("font_css_cache")>-1?c():a(window,"load",c)}();</script>
-<!--END FAST FONTS--><script type="text/javascript">var placeholderTerms=["socks","low top","high top","checkerboard","authentic","era","sk8-hi","platform","black vans","slip on","pro classics","old skool"]</script><script type="text/javascript">(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-25690003-1','vans.com.au');ga('require','ec');ga('require','displayfeatures');</script>
-    <script>function manipulationOfCart(product,type,list){product=eval("("+product+")");if(list==undefined){list='Category - '+product.category}ga('ec:addProduct',{'id':product.id,'name':product.name,'category':product.category,'brand':product.brand,'price':product.price,'list':list,'quantity':product.qty});ga('ec:setAction',type,{list:list});if(type=='add'){ga('send','event','checkout','add_to_cart',product.name);}else if(type=='remove'){ga('send','event','checkout','remove_from_cart',product.name);}}require(['jquery','Scommerce_GoogleUniversalAnalytics/js/jquery_cookie'],function($){$(window).load(function(){$.cookie.json=true;var productToBasket=$.cookie("productToBasket");var productlist=$.cookie("productlist");if(productToBasket!=undefined){console.log(productToBasket);manipulationOfCart(productToBasket,'add',productlist);$.removeCookie("productToBasket",{path:'/',domain:'vans.com.au'});$.removeCookie("productlist",{path:'/',domain:'vans.com.au'});}var productOutBasket=$.cookie("productOutBasket");if(productOutBasket!=undefined){manipulationOfCart(productOutBasket,'remove','');$.removeCookie("productOutBasket",{path:'/',domain:'vans.com.au'});}});});</script>
-
-<meta property="og:type" content="og:product"/>
-<meta property="og:title" content="Boys&#x20;Torrey&#x20;Oversized&#x20;Camo&#x20;Jacket"/>
-<meta property="og:image" content="https://www.vans.com.au/media/catalog/product/cache/3be3d856fd8e516b53e4fc35f08d317b/v/n/vn002rztcm_multi_01.jpg"/>
-<meta property="og:description" content="100&#x25;&#x20;nylon&#x0D;&#x0A;Water-resistant&#x20;&#x0D;&#x0A;Printed&#x20;left&#x20;chest&#x20;graphics&#x0D;&#x0A;Slit&#x20;pockets&#x20;at&#x20;the&#x20;hip"/>
-<meta property="og:url" content="https://www.vans.com.au/boys-torrey-oversized-camo-jacket.html"/>
-    <meta property="product:price:amount" content="89.99"/>
-    <meta property="product:price:currency" content="AUD"/>
-<script>(function(d,s){var js=d.createElement(s),sc=d.getElementsByTagName(s)[0];js.src="/.well-known/section-io/rum/sqrum.js?version=8";sc.parentNode.insertBefore(js,sc);}(document,"script"));</script><script>var sq_rumversion='8';</script><script>var sq_abcookiename='sqtest.';</script><script>var sq_farmname='section';</script></head>
 <body data-container="body" data-mage-init='{"loaderAjax": {}, "loader": { "icon": "https://www.vans.com.au/static/version1557985025/frontend/Ewave/vans/en_AU/images/loader-2.gif" }}' itemtype="http://schema.org/Product" itemscope="itemscope" class="page-product-configurable catalog-product-view product-boys-torrey-oversized-camo-jacket page-layout-1column">
 <div id="fb-root"></div>
 <script type="text/javascript">window.fbAsyncInit=function(){FB.init({appId:'706319309550620',status:true,cookie:true,xfbml:true,version:'v2.6'});};(function(w,d){function fix(){var js,id='facebook-jssdk',ref=d.getElementsByTagName('script')[0];if(d.getElementById(id)){return;}js=d.createElement('script');js.id=id;js.async=true;js.src="//connect.facebook.net/en_US/sdk.js";ref.parentNode.insertBefore(js,ref);}w.addEventListener?w.addEventListener("load",fix,false):w.attachEvent("onload",fix);})(window,document);function greet(id){FB.api('/me',function(response){var src='https://graph.facebook.com/'+id+'/picture';$$('.welcome-msg')[0].insert('<img height="20" src="'+src+'"/>');});}function fblogin(element){try{FB.login(function(response){if(response.status=='connected'){jQuery(element).addClass('loading');window.location.href='https://www.vans.com.au/facebookfree/index/index/referer/aHR0cHM6Ly93d3cudmFucy5jb20uYXUvYm95cy10b3JyZXktb3ZlcnNpemVkLWNhbW8tamFja2V0Lmh0bWw_bm90bW9iaWxld2l0aGRldmljZQ%2C%2C/';}else if(response.status==='not_authorized'){alert('Please, approve our application');}},{scope:'email'});}catch(err){jQuery(element).addClass('loading');window.location.href='https://www.vans.com.au/facebookfree/index/index/referer/aHR0cHM6Ly93d3cudmFucy5jb20uYXUvYm95cy10b3JyZXktb3ZlcnNpemVkLWNhbW8tamFja2V0Lmh0bWw_bm90bW9iaWxld2l0aGRldmljZQ%2C%2C/';}return false;}</script>
@@ -763,7 +690,22 @@
         </div>
     </div>
 <div class="price-box price-tier_price" data-role="priceBox" data-product-id="179620"><script type="text/x-magento-template" id="tier-prices-template">
-
+    <ul class="prices-tier items">
+        <% _.each(tierPrices, function(item, key) { %>
+        <%  var priceStr = '<span class="price-container price-tier_price">'
+                + '<span data-price-amount="' + priceUtils.formatPrice(item.price, currencyFormat) + '"'
+                + ' data-price-type=""' + ' class="price-wrapper ">'
+                + '<span class="price">' + priceUtils.formatPrice(item.price, currencyFormat) + '</span>'
+                + '</span>'
+            + '</span>'; %>
+        <li class="item">
+            <%= $t('Buy %1 for %2 each and').replace('%1', item.qty).replace('%2', priceStr) %>
+                <strong class="benefit">
+                        <%= $t('save') %><span class="percent tier-<%= key %>">&nbsp;<%= item.percentage %></span>%
+                </strong>
+        </li>
+        <% }); %>
+    </ul>
 </script>
 <div data-role="tier-price-block"></div>
 </div><esi:include src="http://www.vans.com.au/test.html" /><div class="product-block-links">
