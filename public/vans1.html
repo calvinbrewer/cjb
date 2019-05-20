@@ -616,6 +616,66 @@
         </a>
     </div>
 </div>
+                </div>
+                                                <div class="data item title"
+                     aria-labeledby="tab-label-reviews-title"
+                     data-role="collapsible" id="tab-label-reviews">
+                    <a class="data switch"
+                       tabindex="-1"
+                       data-toggle="switch"
+                       href="#reviews"
+                       id="tab-label-reviews-title">
+                        Reviews                    </a>
+                </div>
+                <div class="data item content" id="reviews" data-role="content">
+                    
+<div id="product-review-container" class="small-12 medium-6 column review-comments" data-role="product-review"></div>
+<div class="block review-add column small-12 medium-6">
+    <h4 class="block-title">
+        Write Your own review    </h4>
+    <div class="block-content">
+                    <form action="https://www.vans.com.au/review/product/post/id/179620/" class="review-form" method="post" id="review-form"
+                  data-role="product-review-form" data-bind="scope: 'review-form'">
+                <input name="form_key" type="hidden" value="0rEEeJX3b6kEey6p" />                                
+                <div class="fieldset review-fieldset" data-hasrequired="">
+                    <div class="fields">
+                        <div class="field review-field-nickname required">
+                            <label for="nickname_field" class="label"><span>Nickname</span></label>
+                            <div class="control">
+                                <input type="text" name="nickname" id="nickname_field" class="input-text"
+                                       data-validate="{required:true}" data-bind="value: nickname()"/>
+                            </div>
+                        </div>
+                        <div class="field review-field-summary required">
+                            <label for="summary_field" class="label"><span>Title</span></label>
+                            <div class="control">
+                                <input type="text" name="title" id="summary_field" class="input-text"
+                                       data-validate="{required:true}" data-bind="value: review().title"/>
+                            </div>
+                        </div>
+                        <div class="field review-field-text required">
+                            <label for="review_field" class="label"><span>Review</span></label>
+                            <div class="control">
+                                <textarea name="detail" class="input-text" id="review_field" cols="5" rows="3"
+                                          data-validate="{required:true}" data-bind="value: review().detail"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="action">
+                        <button type="submit" class="button primary large"
+                                title="Submit Review">Submit Review</button>
+                    </div>
+                </div>
+
+            </form>
+            
+            </div>
+</div>
+
+
+                </div>
+                    </div>
+    </div>
 <div class="product-detail-trust"><ul class="list columns">
 <li class="list-item large-4 medium-12 small-12">
 <div class="list-title"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon-truck"> <use xlink:href="#svg-icon-truck" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg>
