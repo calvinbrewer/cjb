@@ -439,53 +439,6 @@
                                             </li>
                                     </ul>
     </div>
-    <script>
-        require([
-            'jquery',
-            'jquery/jquery-storageapi'
-        ], function ($) {
-            var storage = $.localStorage.get('mage-breadcrumbs') || {},
-                data = storage[document.referrer] || [];
-            
-            for (var i = data.length; i--;) {
-                $('<li class="item">&nbsp;<a href="' + data[i].url + '">' + data[i].name + '</a></li>')
-                    .insertAfter($('.breadcrumbs .item:first-child'));
-            }
-        });
-    </script>
-<div class="page messages"><div data-placeholder="messages"></div>
-<div data-bind="scope: 'messages'">
-    <div data-bind="foreach: { data: cookieMessages, as: 'message' }" class="messages">
-        <div data-bind="attr: {
-            class: 'message-' + message.type + ' ' + message.type + ' message',
-            'data-ui-id': 'message-' + message.type
-        }">
-            <div data-bind="html: message.text, afterRender: $parent.addExtraClassName($element)"></div>
-        </div>
-    </div>
-    <div data-bind="foreach: { data: messages().messages, as: 'message' }" class="messages">
-        <div data-bind="attr: {
-            class: 'message-' + message.type + ' ' + message.type + ' message',
-            'data-ui-id': 'message-' + message.type
-        }">
-            <div data-bind="html: message.text, afterRender: $parent.addExtraClassName($element)"></div>
-        </div>
-    </div>
-</div>
-<script type="text/x-magento-init">
-    {
-        "*": {
-            "Magento_Ui/js/core/app": {
-                "components": {
-                    "messages": {
-                        "component": "Ewave_Utilities/js/view/messages"
-                    }
-                }
-            }
-        }
-    }
-</script>
-</div><a id="contentarea" tabindex="-1"></a>
 </div><esi:include src="http://www.vans.com.au/test.html" /><div class="product-block-links">
 <div class="product-addto-links" data-role="add-to-links">
             <a href="#"
