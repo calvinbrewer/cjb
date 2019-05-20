@@ -294,7 +294,330 @@
 </div>
 </li>
 <li class="categories js-categories">
-<esi:include src="http://www.vans.com.au/test.html" /><div class="product-block-links">
+<div class="level3"><span style="color: #ffffff; font-size: small;"><a class="title" title="Featured" href="https://www.vans.com.au/shop/kids"><span style="color: #ffffff;">Featured</span></a> </span></div>
+<div class="level3"><a class="title" href="https://www.vans.com.au/shop/kids/new-arrivals">New Arrivals</a></div>
+<div class="level1"><a class="title" href="https://www.vans.com.au/shop/kids/sale">Kids Sale</a></div>
+<div class="level1"><a class="title" href="https://www.vans.com.au/size-guide">Size Guide</a></div>
+</li>
+</ul>                        </li>
+                                                                            <li class="level0 custom-link">
+                            <a class="level-top" title="News" href="https://www.vans.com.au/blog/">
+                                                                News                            </a>
+                        </li>
+                                                                            <li class="level0 ">
+                            <a class="level-top" href="https://www.vans.com.au/sale.html" title="Sale">
+                                                                <span class="js-item-name">Sale</span>
+                                                            </a>
+                                                                                                                </li>
+                                        </ul>
+
+            <ul class="main-menu -middle js-menu" data-mage-init='{"mainMenu":{}}'>
+                                                    <li class="level0 custom-link">
+                            <a class="level-top" href="https://www.vans.com.au/skate-home/">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon-skate">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon-skate"></use>
+                                    </svg>
+                                                                Skate                            </a>
+                        </li>
+                                                                            <li class="level0 custom-link">
+                            <a class="level-top" href="https://www.vans.com.au/bmx-home/">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon-bmx">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon-bmx"></use>
+                                    </svg>
+                                                                Bmx                            </a>
+                        </li>
+                                                                            <li class="level0 custom-link">
+                            <a class="level-top" href="https://www.vans.com.au/surf-home/">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon-surf">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon-surf"></use>
+                                    </svg>
+                                                                Surf                            </a>
+                        </li>
+                                            </ul>
+    
+    <ul class="main-menu -bottom js-menu" data-mage-init='{"mainMenu":{}}'>
+                                                                        <li class="level0 ">
+                                                            <a class="level-top" href="https://www.vans.com.au/about-us/">
+                                                                        About                                </a>
+                                                        <ul>
+<li><a href="/about-us">About Us</a></li>
+<li><a href="/careers">Join the Team</a></li>
+</ul>                        </li>
+                                                                            <li class="level0 custom-link">
+                            <a class="level-top" href="https://help.vans.com.au/hc/en-us">
+                                                                Help                            </a>
+                        </li>
+                                                                                                    <li class="level0 no-title">
+                                                        <a href="https://www.vans.com.au/customer/account/login">Login</a> / <a class="_underline" href="https://www.vans.com.au/customer/account/create/">Register</a>                        </li>
+                                                                                                    <li class="level0 no-title">
+                                                                                </li>
+                                        </ul>
+</nav>
+</div><div class="header-item menu _left">
+    <span class="action nav-toggle" data-action="toggle-nav" data-direction="left">
+        <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon-hamburger">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon-hamburger"></use>
+        </svg><span class="text">Menu</span>
+    </span>
+</div>
+    <a class="logo" href="https://www.vans.com.au/" title="Vans Australia">
+        <img src="https://www.vans.com.au/static/version1557985025/frontend/Ewave/vans/en_AU/images/logo.svg" alt="Vans Australia" width="243" height="63" data-pagespeed-url-hash="1338240479" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+    </a>
+
+<div data-block="minicart" class="header-item minicart minicart-wrapper">
+    <div class="action showcart" data-action="toggle-nav" data-direction="right" data-bind="scope: 'minicart_content'">
+                <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon-cart"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon-cart"></use></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon-arrow-right arrow"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon-arrow-right"></use></svg>
+        <span class="text">Items In Cart</span>
+        <span class="counter qty empty" data-bind="css: { empty: !!getCartParam('summary_count') == false }, blockLoader: isLoading">
+            <span class="counter-number"><!-- ko text: getCartParam('summary_count') --><!-- /ko --></span>
+            <span class="counter-label">
+            <!-- ko if: getCartParam('summary_count') -->
+                <!-- ko text: getCartParam('summary_count') --><!-- /ko -->
+                <!-- ko i18n: 'items' --><!-- /ko -->
+            <!-- /ko -->
+            </span>
+        </span>
+    </div>
+            <div class="block block-minicart empty">
+            <div id="minicart-content-wrapper" class="minicart-content-wrapper" data-bind="scope: 'minicart_content'">
+                <!-- ko template: getTemplate() --><!-- /ko -->
+            </div>
+        </div>
+        <script>window.checkout={"shoppingCartUrl":"https:\/\/www.vans.com.au\/checkout\/cart\/","checkoutUrl":"https:\/\/www.vans.com.au\/checkout\/","updateItemQtyUrl":"https:\/\/www.vans.com.au\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/www.vans.com.au\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/www.vans.com.au\/","minicartMaxItemsVisible":10,"websiteId":"5","maxItemsToDisplay":10,"customerLoginUrl":"https:\/\/www.vans.com.au\/customer\/account\/login\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.vans.com.au\/captcha\/refresh\/","isRequired":false},"guest_checkout":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.vans.com.au\/captcha\/refresh\/","isRequired":false}}};</script>
+    <script type="text/x-magento-init">
+    {
+        "[data-block='minicart']": {
+            "Magento_Ui/js/core/app": {"components":{"minicart_content":{"children":{"subtotal.container":{"children":{"subtotal":{"children":{"subtotal.totals":{"config":{"display_cart_subtotal_incl_tax":1,"display_cart_subtotal_excl_tax":0,"template":"Magento_Tax\/checkout\/minicart\/subtotal\/totals"},"children":{"subtotal.totals.msrp":{"component":"Magento_Msrp\/js\/view\/checkout\/minicart\/subtotal\/totals","config":{"displayArea":"minicart-subtotal-hidden","template":"Magento_Msrp\/checkout\/minicart\/subtotal\/totals"}}},"component":"Magento_Tax\/js\/view\/checkout\/minicart\/subtotal\/totals"}},"component":"uiComponent","config":{"template":"Magento_Checkout\/minicart\/subtotal"}},"shipping":{"component":"Magento_Checkout\/js\/view\/checkout\/minicart\/subtotal\/totals","config":{"template":"Ewave_Checkout\/minicart\/shipping"}},"grandtotal":{"component":"Magento_Checkout\/js\/view\/checkout\/minicart\/subtotal\/totals","config":{"template":"Ewave_Checkout\/minicart\/grandtotal"}}},"component":"uiComponent","config":{"displayArea":"subtotalContainer"}},"item.renderer":{"component":"uiComponent","config":{"displayArea":"defaultRenderer","template":"Magento_Checkout\/minicart\/item\/default"},"children":{"item.image":{"component":"Magento_Catalog\/js\/view\/image","config":{"template":"Magento_Catalog\/product\/image","displayArea":"itemImage"}},"checkout.cart.item.price.sidebar":{"component":"uiComponent","config":{"template":"Magento_Checkout\/minicart\/item\/price","displayArea":"priceSidebar"}}}},"extra_info":{"component":"uiComponent","config":{"displayArea":"extraInfo"}},"promotion":{"component":"uiComponent","config":{"displayArea":"promotion"}}},"config":{"itemRenderer":{"default":"defaultRenderer","simple":"defaultRenderer","virtual":"defaultRenderer"},"template":"Magento_Checkout\/minicart\/content"},"component":"Ewave_Checkout\/js\/view\/minicart-extend","params":{"cssButtonClass1":"primary","cssButtonClass2":"inverted"}}},"types":[]}        },
+        "*": {
+            "Magento_Ui/js/block-loader": "https://www.vans.com.au/static/version1557985025/frontend/Ewave/vans/en_AU/images/loader-1.gif"
+        }
+    }
+    </script>
+</div>
+
+
+<div class="header-item block block-search">
+                <div class="block block-title"><strong>Search</strong></div>
+                <div class="block block-content sli_searchbox">
+                  <form class="form minisearch sli_searchform" id="search_mini_form" method="GET" action="/search/go">
+                    <div class="field search">
+                      <label class="action label" for="search" data-role="minisearch-label">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon-search">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon-search"></use>
+                        </svg>
+                        <span class="text">Search</span>
+                      </label>
+                      <div class="control">
+                        <input id="search" class="input-text sli_searchbox_textfield" role="combobox" data-mage-init='{"quickSearch":{
+                                                                "formSelector":"#search_mini_form"}}' aria-haspopup="false" data-provide="rac" autocomplete="off" name="w" placeholder="Search entire store here..." type="text" style="background: transparent;">
+                        <div class="actions">
+                          <button type="submit" title="Search" class="action search sli_searchbox_go_button">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon-search"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon-search"></use></svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+</div></div></header><div class="widget block block-static-block">
+    <style type="text/css" xml="space">.top-container{background-color:#000}.catalog-product-view .breadcrumbs{display:none}.block-static-block.widget{margin-bottom:0}.home-head-trust ul{list-style-type:none;margin-bottom:0;padding-left:0}.home-head-trust li{list-style-type:none;font-size:14px;text-transform:uppercase;text-align:center;margin-bottom:4px;margin-top:4px;color:#fff;font-weight:400}.home-head-trust a{text-decoration:none;color:#fff;background:#000;font-weight:700}</style>
+<div style="background: black; color: white;" class="home-head-trust">
+<ul class="list columns">
+<li style="background: black; color: red;" class="large-12 medium-12 small-12"><strong><a href="/shop/sale">3 Day Flash Sale | 30-50% Off Selected Styles | <u>Shop Now</strong></u></a></li>
+<!--<li style="background: black; color: red;" class="large-12 medium-12 small-12"><strong><a href="/afterpay"> Buy Now, Pay Later with Afterpay | <u>Learn How</strong></u></a></li>--!>
+</ul>
+</div></div>
+<main id="maincontent" class="page-main">    <div class="breadcrumbs">
+        <ul class="items">
+                                                <li class="item home">
+                                                    <a href="https://www.vans.com.au/" title="Go to Home Page">
+                                Home                            </a>
+                                            </li>
+                                                                <li class="item product">
+                                                    <strong>Boys Torrey Oversized Camo Jacket</strong>
+                                            </li>
+                                    </ul>
+    </div>
+    <script>
+        require([
+            'jquery',
+            'jquery/jquery-storageapi'
+        ], function ($) {
+            var storage = $.localStorage.get('mage-breadcrumbs') || {},
+                data = storage[document.referrer] || [];
+            
+            for (var i = data.length; i--;) {
+                $('<li class="item">&nbsp;<a href="' + data[i].url + '">' + data[i].name + '</a></li>')
+                    .insertAfter($('.breadcrumbs .item:first-child'));
+            }
+        });
+    </script>
+<div class="page messages"><div data-placeholder="messages"></div>
+<div data-bind="scope: 'messages'">
+    <div data-bind="foreach: { data: cookieMessages, as: 'message' }" class="messages">
+        <div data-bind="attr: {
+            class: 'message-' + message.type + ' ' + message.type + ' message',
+            'data-ui-id': 'message-' + message.type
+        }">
+            <div data-bind="html: message.text, afterRender: $parent.addExtraClassName($element)"></div>
+        </div>
+    </div>
+    <div data-bind="foreach: { data: messages().messages, as: 'message' }" class="messages">
+        <div data-bind="attr: {
+            class: 'message-' + message.type + ' ' + message.type + ' message',
+            'data-ui-id': 'message-' + message.type
+        }">
+            <div data-bind="html: message.text, afterRender: $parent.addExtraClassName($element)"></div>
+        </div>
+    </div>
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "messages": {
+                        "component": "Ewave_Utilities/js/view/messages"
+                    }
+                }
+            }
+        }
+    }
+</script>
+</div><a id="contentarea" tabindex="-1"></a>
+<div class="columns"><div class="main-wrapper small-12 medium-12"><div class="column main"><div class="product-media small-8 large-9"><a id="gallery-prev-area" tabindex="-1"></a>
+<div class="action-skip-wrapper"><a class="action skip gallery-next-area" href="#gallery-next-area"><span>Skip to the end of the images gallery</span></a>
+</div><div class="gallery-placeholder _block-content-loading custom-gallery" data-gallery-role="gallery-placeholder">
+    <div data-role="loader" class="loading-mask">
+        <div class="loader">
+            <img src="https://www.vans.com.au/static/version1557985025/frontend/Ewave/vans/en_AU/images/loader-1.gif"
+                 alt="Loading...">
+        </div>
+    </div>
+</div>
+<script type="text/x-magento-init">
+    {
+        "[data-gallery-role=gallery-placeholder]": {
+            "mage/gallery/gallery": {
+                "mixins":["magnifier/magnify"],
+                "magnifierOpts": {"fullscreenzoom":"5","top":"","left":"","width":"","height":"","eventType":"hover","enabled":"false"},
+                "data": [{"thumb":"https:\/\/www.vans.com.au\/media\/catalog\/product\/cache\/f9c7fbe9b524c081a3ccf800cbd963eb\/v\/n\/vn002rztcm_multi_01.jpg","img":"https:\/\/www.vans.com.au\/media\/catalog\/product\/cache\/c687aa7517cf01e65c009f6943c2b1e9\/v\/n\/vn002rztcm_multi_01.jpg","full":"https:\/\/www.vans.com.au\/media\/catalog\/product\/cache\/926507dc7f93631a094422215b778fe0\/v\/n\/vn002rztcm_multi_01.jpg","caption":null,"position":"1","isMain":true,"type":"image","videoUrl":null},{"thumb":"https:\/\/www.vans.com.au\/media\/catalog\/product\/cache\/f9c7fbe9b524c081a3ccf800cbd963eb\/v\/n\/vn002rztcm_multi_03.jpg","img":"https:\/\/www.vans.com.au\/media\/catalog\/product\/cache\/c687aa7517cf01e65c009f6943c2b1e9\/v\/n\/vn002rztcm_multi_03.jpg","full":"https:\/\/www.vans.com.au\/media\/catalog\/product\/cache\/926507dc7f93631a094422215b778fe0\/v\/n\/vn002rztcm_multi_03.jpg","caption":null,"position":"2","isMain":false,"type":"image","videoUrl":null},{"thumb":"https:\/\/www.vans.com.au\/media\/catalog\/product\/cache\/f9c7fbe9b524c081a3ccf800cbd963eb\/v\/n\/vn002rztcm_multi_02.jpg","img":"https:\/\/www.vans.com.au\/media\/catalog\/product\/cache\/c687aa7517cf01e65c009f6943c2b1e9\/v\/n\/vn002rztcm_multi_02.jpg","full":"https:\/\/www.vans.com.au\/media\/catalog\/product\/cache\/926507dc7f93631a094422215b778fe0\/v\/n\/vn002rztcm_multi_02.jpg","caption":null,"position":"3","isMain":false,"type":"image","videoUrl":null}],
+                "options": {
+                    "nav": "dots",
+                    "loop": true,
+                    "keyboard": true,
+                    "arrows": true,
+                    "allowfullscreen": true,
+                    "showCaption": false,
+                    "width": 700,
+                    "thumbwidth": 88,
+                    "thumbheight": 110,
+                    "height": 560,
+                    "transitionduration": 500,
+                    "transition": "slide",
+                    "navarrows": true,
+                    "navtype": "slides",
+                    "navdir": "horizontal"
+                },
+                "fullscreen": {
+                    "nav": "dots",
+                    "loop": true,
+                    "navdir": "horizontal",
+                    "arrows": true,
+                    "showCaption": false,
+                    "transitionduration": 500,
+                    "transition": "dissolve"
+                },
+                "breakpoints": {"mobile":{"conditions":{"max-width":"767px"},"options":{"options":{"nav":"dots"}}}}            }
+        }
+    }
+</script>
+<script type="text/x-magento-init">
+    {
+        "[data-gallery-role=gallery-placeholder]": {
+            "Magento_ProductVideo/js/fotorama-add-video-events": {
+                "videoData": [{"mediaType":"image","videoUrl":null,"isBase":true},{"mediaType":"image","videoUrl":null,"isBase":false},{"mediaType":"image","videoUrl":null,"isBase":false}],
+                "videoSettings": [{"playIfBase":"0","showRelated":"0","videoAutoRestart":"0"}],
+                "optionsVideoData": {"179616":[],"179617":[],"179618":[],"179619":[]}            }
+        }
+    }
+</script>
+<div class="action-skip-wrapper"><a class="action skip gallery-prev-area" href="#gallery-prev-area"><span>Skip to the beginning of the images gallery</span></a>
+</div><a id="gallery-next-area" tabindex="-1"></a>
+    <div class="product info detailed">
+                        <div class="product data items tabs js-tabs" data-mage-init='{"tabs":{"openedState": "active"}}'>
+                                                <div class="data item title"
+                     aria-labeledby="tab-label-additional-title"
+                     data-role="collapsible" id="tab-label-additional">
+                    <a class="data switch"
+                       tabindex="-1"
+                       data-toggle="switch"
+                       href="#additional"
+                       id="tab-label-additional-title">
+                        Features                    </a>
+                </div>
+                <div class="data item content" id="additional" data-role="content">
+                        <div class="additional-attributes-wrapper">
+        <div class="additional-attributes" id="product-attribute-specs-table">
+            <div class="item small-6 large-4">
+                <h4 class="title">Product Details</h4>
+                <div class="content content-short-description">
+                    <ul><li>100% nylon
+</li><li>Water-resistant 
+</li><li>Printed left chest graphics
+</li><li>Slit pockets at the hip</li></ul>                </div>
+                <div class="content content-sku">
+                    Item number:
+                    VN002RZTCM.MULT                </div>
+            </div>
+            <div class="item small-6 large-8">
+                <h4 class="title">Description</h4>
+                <div class="content">
+                    The Boys Torrey Coaches Jacket is a 100% nylon water-resistant buttondown coaches jacket with printed left chest graphics and slit pockets at the hips.                </div>
+            </div>
+        </div>
+    </div>
+                </div>
+                                                <div class="data item title"
+                     aria-labeledby="tab-label-trending_images-title"
+                     data-role="collapsible" id="tab-label-trending_images">
+                    <a class="data switch"
+                       tabindex="-1"
+                       data-toggle="switch"
+                       href="#trending_images"
+                       id="tab-label-trending_images-title">
+                        Trending                    </a>
+                </div>
+                <div class="data item content" id="trending_images" data-role="content">
+                    <div class="trending-block">
+    <div class="text info">
+        Share your style with us by using the<strong> #vansaustralia </strong>hashtag    </div>
+    <div id="trending-container" class="trending-container" >
+        <div class="slide-prev slide-nav js-prev">
+            <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon-arrow-left">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon-arrow-left"></use>
+            </svg>
+        </div>
+        <div class="slide-next slide-nav js-next">
+            <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon-arrow-right">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon-arrow-right"></use>
+            </svg>
+        </div>
+        <div class="swiper-container js-swiper-container" >
+            <div class="swiper-wrapper" data-role="grid-container"></div>
+        </div>
+    </div>
+    <div class="link info">
+        Follow <strong>@vansaustralia</strong> on        <a href="https://www.instagram.com/vansaustralia">
+            <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon-instagram-text">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon-instagram-text"></use>
+            </svg>
+        </a>
+    </div>
+</div>
+<div data-role="tier-price-block"></div>
+</div><esi:include src="http://www.vans.com.au/test.html" /><div class="product-block-links">
 <div class="product-addto-links" data-role="add-to-links">
             <a href="#"
             class="action towishlist"
