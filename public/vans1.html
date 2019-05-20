@@ -364,37 +364,6 @@
         <img src="https://www.vans.com.au/static/version1557985025/frontend/Ewave/vans/en_AU/images/logo.svg" alt="Vans Australia" width="243" height="63" data-pagespeed-url-hash="1338240479" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
     </a>
 
-<div data-block="minicart" class="header-item minicart minicart-wrapper">
-    <div class="action showcart" data-action="toggle-nav" data-direction="right" data-bind="scope: 'minicart_content'">
-                <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon-cart"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon-cart"></use></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon-arrow-right arrow"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon-arrow-right"></use></svg>
-        <span class="text">Items In Cart</span>
-        <span class="counter qty empty" data-bind="css: { empty: !!getCartParam('summary_count') == false }, blockLoader: isLoading">
-            <span class="counter-number"><!-- ko text: getCartParam('summary_count') --><!-- /ko --></span>
-            <span class="counter-label">
-            <!-- ko if: getCartParam('summary_count') -->
-                <!-- ko text: getCartParam('summary_count') --><!-- /ko -->
-                <!-- ko i18n: 'items' --><!-- /ko -->
-            <!-- /ko -->
-            </span>
-        </span>
-    </div>
-            <div class="block block-minicart empty">
-            <div id="minicart-content-wrapper" class="minicart-content-wrapper" data-bind="scope: 'minicart_content'">
-                <!-- ko template: getTemplate() --><!-- /ko -->
-            </div>
-        </div>
-        <script>window.checkout={"shoppingCartUrl":"https:\/\/www.vans.com.au\/checkout\/cart\/","checkoutUrl":"https:\/\/www.vans.com.au\/checkout\/","updateItemQtyUrl":"https:\/\/www.vans.com.au\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/www.vans.com.au\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/www.vans.com.au\/","minicartMaxItemsVisible":10,"websiteId":"5","maxItemsToDisplay":10,"customerLoginUrl":"https:\/\/www.vans.com.au\/customer\/account\/login\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.vans.com.au\/captcha\/refresh\/","isRequired":false},"guest_checkout":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.vans.com.au\/captcha\/refresh\/","isRequired":false}}};</script>
-    <script type="text/x-magento-init">
-    {
-        "[data-block='minicart']": {
-            "Magento_Ui/js/core/app": {"components":{"minicart_content":{"children":{"subtotal.container":{"children":{"subtotal":{"children":{"subtotal.totals":{"config":{"display_cart_subtotal_incl_tax":1,"display_cart_subtotal_excl_tax":0,"template":"Magento_Tax\/checkout\/minicart\/subtotal\/totals"},"children":{"subtotal.totals.msrp":{"component":"Magento_Msrp\/js\/view\/checkout\/minicart\/subtotal\/totals","config":{"displayArea":"minicart-subtotal-hidden","template":"Magento_Msrp\/checkout\/minicart\/subtotal\/totals"}}},"component":"Magento_Tax\/js\/view\/checkout\/minicart\/subtotal\/totals"}},"component":"uiComponent","config":{"template":"Magento_Checkout\/minicart\/subtotal"}},"shipping":{"component":"Magento_Checkout\/js\/view\/checkout\/minicart\/subtotal\/totals","config":{"template":"Ewave_Checkout\/minicart\/shipping"}},"grandtotal":{"component":"Magento_Checkout\/js\/view\/checkout\/minicart\/subtotal\/totals","config":{"template":"Ewave_Checkout\/minicart\/grandtotal"}}},"component":"uiComponent","config":{"displayArea":"subtotalContainer"}},"item.renderer":{"component":"uiComponent","config":{"displayArea":"defaultRenderer","template":"Magento_Checkout\/minicart\/item\/default"},"children":{"item.image":{"component":"Magento_Catalog\/js\/view\/image","config":{"template":"Magento_Catalog\/product\/image","displayArea":"itemImage"}},"checkout.cart.item.price.sidebar":{"component":"uiComponent","config":{"template":"Magento_Checkout\/minicart\/item\/price","displayArea":"priceSidebar"}}}},"extra_info":{"component":"uiComponent","config":{"displayArea":"extraInfo"}},"promotion":{"component":"uiComponent","config":{"displayArea":"promotion"}}},"config":{"itemRenderer":{"default":"defaultRenderer","simple":"defaultRenderer","virtual":"defaultRenderer"},"template":"Magento_Checkout\/minicart\/content"},"component":"Ewave_Checkout\/js\/view\/minicart-extend","params":{"cssButtonClass1":"primary","cssButtonClass2":"inverted"}}},"types":[]}        },
-        "*": {
-            "Magento_Ui/js/block-loader": "https://www.vans.com.au/static/version1557985025/frontend/Ewave/vans/en_AU/images/loader-1.gif"
-        }
-    }
-    </script>
-</div>
 
 
 <div class="header-item block block-search">
