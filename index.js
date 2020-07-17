@@ -1,8 +1,6 @@
 require('dotenv').config();
-require('newrelic');
 
 const express = require('express');
-const { Nuxt, Builder } = require('nuxt');
 const bodyParser = require('body-parser');
 
 const port = process.env.PORT || 3000;
@@ -11,7 +9,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-const pagecount = 1;
+let pagecount = 1;
 
 app.get('/pagecount-esi-1', function (req, res, next) {
     res.send("<span id='p'>" + pagecount + "</span>");
