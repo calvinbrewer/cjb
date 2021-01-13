@@ -62,6 +62,20 @@ app.post('/drift-test', function(req, res, next) {
     res.send("Cool that worked.");
 });
 
+app.get('/unhealthy', function(req, res) {
+    res.send(503);
+});
+
+app.get('/unhealthytimeout', function(req, res) {
+    setTimeout( function() {
+        res.send(503);
+    }, 120000);
+});
+
+app.get('/healthcheck', function(req, res) {
+    res.send(200);
+});
+
 app.use('/nuxt', express.static(__dirname + '/dist'));
 app.use('/', express.static(__dirname + '/public'));
 
