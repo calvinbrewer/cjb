@@ -11,22 +11,50 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-let pagecount = 1;
+let failover_flag = true;
 
-app.get('/1.html', function (req, res, next) {
+app.get('/1', function (req, res, next) {
     res.send("<!DOCTYPE html>" +
       "<html>"+
         "<head>" +
           '<meta charset="UTF-8">' +
         "</head>" +
         "<body>" +
-        "<h1>section.io Varnish done right</h1>\n<p>Page count: " + pagecount + "</p>" +
+        "<h1>Hello World</p>" +
         "</body>" +
-        `<script>window.intercomSettings = {app_id: "de5zdti6"};</script><script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/de5zdti6';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>` +
       "</html>"
     );
+});
 
-    pagecount += 1;
+app.get('/2', function (req, res, next) {
+    if (failover_flag) {
+        res.json({ error: 'true' })
+    }else{
+        res.send("Hello World 2");
+    }
+});
+
+app.get('/3', function (req, res, next) {
+    if (failover_flag) {
+        res.sendStatus(500);
+    }else{
+        res.send("Hello World 3");
+    }
+});
+
+app.get('/4', function (req, res, next) {
+    if (failover_flag) {
+        setTimeout( function() {
+            res.send(200);
+        }, 10000);
+    }else{
+        res.send("Hello World 4");
+    }
+});
+
+app.get('/triggerfail', (req, resp) => {
+    failover_flag = !failover_flag;
+    resp.send("OK");
 });
 
 app.get('/account', function (req, res, next) {

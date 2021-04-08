@@ -1,4 +1,3 @@
-
 const Ipfs = require('ipfs');
 const OrbitDB = require('orbit-db');
 
@@ -21,7 +20,7 @@ class NewPiecePlease {
           Swarm: [
             '/dns4/wrtc-star1.par.dwebops.pub/tcp/443/wss/p2p-webrtc-star',
             '/ip4/0.0.0.0/tcp/4002', 
-            '/ip4/127.0.0.1/tcp/4003/ws', 
+            '/ip4/127.0.0.1/tcp/4003/ws',
           ],
           Gateway: '/ip4/0.0.0.0/tcp/0'
         },
@@ -43,12 +42,10 @@ class NewPiecePlease {
     const nodeInfo = this.node.id();
     const docStoreOptions = {
       indexBy: 'hash',
-      accessController: {
-        write: ['*'],
-      },
     }
 
-    this.counter = await this.orbitdb.counter('mytestcounter', docStoreOptions);
+    this.counter = await this.orbitdb.open('/orbitdb/zdpuAokcm2UqKggMHk77sEu4bjK11DDAVjDHXNHU4boUAzB7J/mytestcounter');
+    // this.counter = await this.orbitdb.open('/orbitdb/zdpuAu2VQtMiKW4m7wp5sLA16V4y2AunSQJ1ifvJzuJ2FgYVD/test');
     await this.counter.load();
 
     await this.node.libp2p.on('peer:connect', this.handlePeerConnected.bind(this));
@@ -70,8 +67,7 @@ class NewPiecePlease {
     return peers;
   }
 
-  async connectToPeer (multiaddr, protocol = "/ip4/159.89.92.87/tcp/4002/p2p/") {
-
+  async connectToPeer (multiaddr, protocol = "/ip4/167.172.138.147/tcp/4002/p2p/") {
     try {
       await this.node.swarm.connect(protocol + multiaddr);
     } catch (e) {
@@ -81,7 +77,6 @@ class NewPiecePlease {
 
   handlePeerConnected (ipfsPeer) {
     const ipfsId = ipfsPeer.id._idB58String;
-    console.log("Yo:", ipfsId);
     setTimeout(async () => {
       await this.sendMessage(ipfsId, { userDb: this.user.id });
     }, 2000);
@@ -96,7 +91,7 @@ class NewPiecePlease {
 
     switch(msgKeys[0]) {
       case "userDb":
-        const peerDb = await this.orbitdb.open(parsedMsg.userDb);
+        const peerDb = await this.orbitdb.open(parsedMsg.userDb)
         
         peerDb.events.on("replicated", async () => {
           if(peerDb.get("pieces")) {
@@ -135,19 +130,20 @@ NPP.onmessage = console.log;
 
 NPP._init().then(async () => {
   await NPP.incrementCounter();
-  await NPP.node.config.set("Addresses.Swarm", [
-    '/ip4/0.0.0.0/tcp/4002', 
-    '/ip4/127.0.0.1/tcp/4003/ws',
-    '/dns4/wrtc-star1.par.dwebops.pub/tcp/443/wss/p2p-webrtc-star'
-  ]);
-
+  //await NPP.node.config.set("Addresses.Swarm", ['/ip4/0.0.0.0/tcp/4004', '/ip4/127.0.0.1/tcp/4005/ws']);
   console.log(NPP.readCounter());
-  console.log(await NPP.getPeers());
   // console.log(await NPP.node.bootstrap.list());
-  console.log(await NPP.connectToPeer('QmWvut6LyLC1BSay1JnzFZmsfeoZvRA3wDjkTunjMS68pK'));
+  console.log(await NPP.connectToPeer('QmRyBFt6ez1zp15CAM9isNb1JXjpurbKJxEZTgoDLR4U7E'));
   console.log(await NPP.getPeers());
-  console.log(NPP.readCounter());
 });
+
+
+// try {
+//   module.exports = exports = new NewPiecePlease(Ipfs, OrbitDB);
+// } catch (e) {
+//   window.NPP = new NewPiecePlease(window.Ipfs, window.OrbitDB);
+// }
+
 
 const express = require('express');
 const app = express();
@@ -160,10 +156,3 @@ app.get('/', async (req, res) => {
 });
 
 app.listen(3000);
-
-
-// try {
-//   module.exports = exports = new NewPiecePlease(Ipfs, OrbitDB);
-// } catch (e) {
-//   window.NPP = new NewPiecePlease(window.Ipfs, window.OrbitDB);
-// }
