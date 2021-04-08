@@ -14,6 +14,7 @@ app.use(cookieParser());
 let failover_flag = true;
 
 app.get('/1', function (req, res, next) {
+    res.set('Cache-control', 'public, max-age=300');
     res.send({
         data: "Hello"
     });
